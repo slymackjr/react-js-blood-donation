@@ -13,7 +13,7 @@ import { donorData,dummyData,acceptData,profileData,sampleData,tryData } from '.
 const App = () => {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/'>
       <Routes>
         <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
