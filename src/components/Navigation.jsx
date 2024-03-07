@@ -1,10 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {Dropdown} from '.';
+import { logo1 } from '../assets/img';
 
 const Navigation = ({username,homeColor,sentRequestsColor,acceptedRequestsColor,aboutTeamColor,contactTeamColor,profileColor,}) => {
     const defaultTextColor = "white"; // default text color
   return (
+    <div>
+    <div className="text-center p-3 container-md">
+      <Link to={"/request-donor"}>
+        <img src={logo1} className="h-25 w-75 rounded" alt="Company Logo" />
+      </Link>
+    </div>
     <nav className="navbar navbar-expand-lg bg-primary">
       <div className="container-fluid">
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,6 +40,7 @@ const Navigation = ({username,homeColor,sentRequestsColor,acceptedRequestsColor,
         </div>
       </div>
     </nav>
+    </div>
   );
 }
 

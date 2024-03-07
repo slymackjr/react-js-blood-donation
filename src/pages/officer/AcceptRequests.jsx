@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Footer, Navigation } from '../../components';
-import { logo1 } from '../../assets/img';
 
 function AcceptRequests({ allDonors }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,9 +17,6 @@ function AcceptRequests({ allDonors }) {
 
   return (
     <div>
-      <div className="text-center p-3 container-md ">
-        <img src={logo1} className="h-25 w-50 rounded" alt="..." />
-      </div>
       <Navigation username={'Mike Junior'} acceptedRequestsColor={'primary'}/>
 
       <div id="carouselExample" className="carousel">
@@ -44,10 +40,10 @@ function AcceptRequests({ allDonors }) {
                     <li><strong>Appointment Date:</strong> {donor.request_date}</li>
                     <li><strong>Email:</strong> {donor.email}</li>
                   </ul>
-                  <form action="/staff/deleteRequest" method="POST">
+                  <form>
                     <input type="hidden" name="request_id" value={donor.request_id} />
                     <div className="d-grid mt-4">
-                      <button type="submit" className="btn btn-success btn-lg">Attended</button>
+                      <button className="btn btn-success btn-lg">Attended</button>
                     </div>
                   </form>
                 </div>

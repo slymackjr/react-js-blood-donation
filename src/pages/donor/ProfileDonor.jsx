@@ -1,15 +1,11 @@
 import React from 'react';
 import {Navbar,Footer} from '../../components'
-import { logo1 } from '../../assets/img';
+import { splash1 } from '../../assets/img';
 
 
 const ProfileDonor = ({ donor }) => {
     return (
         <div>
-            <div className="text-center p-3 container-md">
-                <img src={logo1} className="h-25 w-50 rounded" alt="Company Logo" />
-            </div>
-
             {/* Navbar */}
             <Navbar username="John Doe" profileColor={'primary'}/>
 
@@ -29,7 +25,7 @@ const ProfileDonor = ({ donor }) => {
                         <div className="col-lg-4">
                             <div className="card mb-4">
                                 <div className="card-body text-center">
-                                    <img src="img/splash1.jpg" alt="avatar" className="rounded-circle img-fluid" style={{ width: "150px" }} />
+                                    <img src={splash1} alt="avatar" className="rounded-circle img-fluid" style={{ width: "150px" }} />
                                     <h5 className="my-3">{ donor.fullName }</h5>
                                     <p className="text-muted mb-1">{ donor.birthdate }</p>
                                     <p className="text-muted mb-4">{ donor.address }</p>
@@ -48,7 +44,7 @@ const ProfileDonor = ({ donor }) => {
                                             <p className="mb-0">Full Name</p>
                                         </div>
                                         <div className="col-sm-9">
-                                            <p className="text-muted mb-0">{ donor.fullName }</p>
+                                            <p className="text-muted mb-0">{ donor.full_name }</p>
                                         </div>
                                     </div>
                                     <hr />
@@ -66,11 +62,28 @@ const ProfileDonor = ({ donor }) => {
                                             <p className="mb-0">Phone</p>
                                         </div>
                                         <div className="col-sm-9">
-                                            <p className="text-muted mb-0">{ donor.phoneNumber }</p>
+                                            <p className="text-muted mb-0">{ donor.phone_number }</p>
                                         </div>
                                     </div>
-                                    {/* Other details */}
-                                    {/* Gender, BloodType, etc. */}
+                                    <hr />
+                                    <div className="row">
+                                        <div className="col-sm-3">
+                                            <p className="mb-0">Gender</p>
+                                        </div>
+                                        <div className="col-sm-9">
+                                            <p className="text-muted mb-0">{ donor.gender }</p>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div className="row">
+                                        <div className="col-sm-3">
+                                            <p className="mb-0">Blood Type</p>
+                                        </div>
+                                        <div className="col-sm-9">
+                                            <p className="text-muted mb-0">{ donor.blood_type }</p>
+                                        </div>
+                                    </div>
+                                    <hr />
                                 </div>
                             </div>
                         </div>

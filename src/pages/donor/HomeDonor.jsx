@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Navbar, Footer } from '../../components';
-import { logo1 } from '../../assets/img';
 
 const HomeDonor = ({ allDonors, successMessage }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,11 +17,6 @@ const HomeDonor = ({ allDonors, successMessage }) => {
 
   return (
     <div>
-      {/* Company Logo */}
-      <div className="text-center p-3 container-md">
-        <img src={logo1} className="h-25 w-50 rounded" alt="Company Logo" />
-      </div>
-
       {/* Navbar */}
       <Navbar username={'John Doe'} homeColor={'primary'} />
 

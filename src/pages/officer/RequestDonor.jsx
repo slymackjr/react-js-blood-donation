@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Footer, Navigation } from '../../components';
-import { logo1 } from '../../assets/img';
 
 const RequestDonor = ({ allDonors}) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -17,9 +16,6 @@ const RequestDonor = ({ allDonors}) => {
   const paginate = pageNumber => setCurrentPage(pageNumber);
   return (
     <div>
-      <div className="text-center p-3 container-md ">
-        <img src={logo1} className="h-25 w-50 rounded" alt="..." />
-      </div>
       <Navigation username={'Mike Junior'} homeColor={'primary'}/>
 
       <div id="carouselExample" className="carousel">
@@ -41,16 +37,16 @@ const RequestDonor = ({ allDonors}) => {
                     <li><strong>Health:</strong> {donor.status}</li>
                   </ul>
                   <div className="d-grid gap-2 mt-4">
-                    <form action="{{ route('staff.createRequest') }}" method="POST">
+                    <form>
                       <input type="hidden" name="donor_email" value={donor.email} />
                       <p className="card-text text-center">
-                        <button type="submit" className="btn link-secondary">More...</button>
+                        <button className="btn link-secondary">More...</button>
                       </p>
                     </form>
-                    <form action="{{ route('staff.createRequest') }}" method="POST">
+                    <form>
                       <input type="hidden" name="donor_email" value={donor.email} />
                       <p className="card-text text-center">
-                        <button type="submit" className="btn btn-primary">Request</button>
+                        <button className="btn btn-primary">Request</button>
                       </p>
                     </form>
                   </div>
@@ -59,55 +55,7 @@ const RequestDonor = ({ allDonors}) => {
             </article>
           ))}
         </div>
-      </div>
-      {/* Pagination links */}
-      {/* <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <nav aria-label="Page navigation example">
-              <ul className="pagination justify-content-center">
-                <li className="page-item">
-                  <a className="page-link" href="#">Previous</a>
-                </li>
-                <li className="page-item active">
-                  <a className="page-link" href="#">1</a>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="#">Next</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div> */}
-       {/* Pagination links */}
-       {/* <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <nav aria-label="Page navigation example">
-              <ul className="pagination justify-content-center">
-                <li className="page-item">
-                  <a className="page-link" href="#" onClick={() => paginate(currentPage - 1)}>
-                    Previous
-                  </a>
-                </li>
-                {Array.from({ length: Math.ceil(allDonors.length / donorsPerPage) }).map((_, index) => (
-                  <li key={index} className={`page-item ${currentPage === index + 1 && 'active'}`}>
-                    <a className="page-link" href="#" onClick={() => paginate(index + 1)}>
-                      {index + 1}
-                    </a>
-                  </li>
-                ))}
-                <li className="page-item">
-                  <a className="page-link" href="#" onClick={() => paginate(currentPage + 1)}>
-                    Next
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div> */}
+      </div> 
       {/* Pagination links */}
       <div className="container">
         <div className="row">

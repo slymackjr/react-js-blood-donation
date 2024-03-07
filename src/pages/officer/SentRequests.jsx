@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Footer, Navigation } from '../../components';
-import { logo1 } from '../../assets/img';
 
 const SentRequests = ({ allDonors }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,9 +17,6 @@ const SentRequests = ({ allDonors }) => {
 
   return (
     <div>
-      <div className="text-center p-3 container-md">
-        <img src={logo1} className="h-25 w-50 rounded" alt="..." />
-      </div>  
       {/* Navbar */}
       <Navigation username={'Mike Junior'} sentRequestsColor={'primary'}/>
       {/* End Navbar */}
@@ -50,7 +46,7 @@ const SentRequests = ({ allDonors }) => {
                   <form>
                     <input type="hidden" name="request_id" value={donor.request_id} />
                     <div className="d-grid mt-4">
-                      <button type="submit" className="btn btn-danger btn-lg">Cancel Requests</button>
+                      <button className="btn btn-danger btn-lg">Cancel Requests</button>
                     </div>
                   </form>
                 </div>

@@ -1,11 +1,10 @@
 import React from 'react';
 import { Footer, Navigation } from '../../components';
-import { logo1, splash1 } from '../../assets/img';
+import { splash1 } from '../../assets/img';
 
 const RequestDonorCreate = ({ donorDetails, staffemail }) => {
   return (
-    <div className="text-center p-3 container-md">
-      <img src={logo1} className="h-25 w-50 rounded" alt="..." />
+    <div>
       <Navigation username={'Mike Junior'} homeColor={'primary'}/>
 
       <div id="carouselExample" className="carousel">

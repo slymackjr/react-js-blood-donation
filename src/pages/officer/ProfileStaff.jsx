@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Footer, Navigation } from '../../components';
-import { logo1 } from '../../assets/img';
+import { splash1 } from '../../assets/img';
 
 const ProfileStaff = ({ staffData }) => {
   return (
     <div>
-      <div className="text-center p-3 container-md">
-        <img src={logo1} className="h-25 w-50 rounded" alt="..." />
-      </div>
       <Navigation username={'Mike Junior'} profileColor={'primary'}/>
       <div id="carouselExample" className="carousel">
         <div className="carousel-inner">
@@ -19,7 +16,7 @@ const ProfileStaff = ({ staffData }) => {
             <div className="col-lg-4">
               <div className="card mb-4">
                 <div className="card-body text-center">
-                  <img src="{{asset('img/splash1.jpg')}}" alt="avatar" className="rounded-circle img-fluid" style={{ width: '150px' }} />
+                  <img src={splash1} alt="avatar" className="rounded-circle img-fluid" style={{ width: '150px' }} />
                   <h5 className="my-3">{staffData.full_name}</h5>
                   <p className="text-muted mb-1">{staffData.job_title}</p>
                   <p className="text-muted mb-4">{staffData.address}</p>
@@ -77,6 +74,7 @@ const ProfileStaff = ({ staffData }) => {
                       <p className="text-muted mb-0">{staffData.address}</p>
                     </div>
                   </div>
+                  <hr />
                 </div>
               </div>
               <div className="row">

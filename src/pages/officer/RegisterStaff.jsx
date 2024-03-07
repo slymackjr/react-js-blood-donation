@@ -7,10 +7,10 @@ const RegisterStaff = () => {
     <div>
         <div className="text-center p-3 container-md">
       <Link to="/">
-        <img src={logo1} className="h-25 w-50 rounded" alt="..." />
+        <img src={logo1} className="h-25 w-75 rounded" alt="..." />
       </Link>
     </div>
-    <div id="intro-example" className="p-5 text-center bg-image align-items-center">
+    <div id="intro-example" className="text-center bg-image align-items-center">
       <section>
         <div className="container h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">

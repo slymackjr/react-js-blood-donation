@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Navbar, Footer } from '../../components';
-import { logo1 } from '../../assets/img';
 
 const Appointments = ({ allDonors }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -18,9 +17,6 @@ const Appointments = ({ allDonors }) => {
 
   return (
     <div>
-      <div className="text-center p-3 container-md">
-        <img src={logo1} className="h-25 w-50 rounded" alt="Company Logo" />
-      </div>
       <Navbar username="John Doe" appointmentsColor={'primary'} />
       <div id="carouselExample" className="carousel">
         <div className="carousel-inner">
