@@ -3,6 +3,10 @@ import { Footer, Navigation } from '../../components';
 import { splash1 } from '../../assets/img';
 
 const RequestDonorCreate = ({ donorDetails, staffemail }) => {
+    const handleSubmit = (event) => {
+        event.preventDefault(); // Prevent the default form submission behavior
+        // Optionally, you can add any other logic here, such as showing a message to the user
+    };
   return (
     <div>
       <Navigation username={'Mike Junior'} homeColor={'primary'}/>
@@ -48,7 +52,7 @@ const RequestDonorCreate = ({ donorDetails, staffemail }) => {
                 <div className="col-md-6">
                   <div className="card mb-4 mb-md-0">
                     <div className="card-body">
-                      <form>
+                      <form onSubmit={handleSubmit}>
                         <input type="hidden" name="staff_email" value="{{ $staffemail }}" />
                         <input type="hidden" name="donor_email" value="{{ $donorDetails['email'] }}" />
                         <div className="mb-3">

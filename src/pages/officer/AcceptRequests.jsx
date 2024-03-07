@@ -15,6 +15,11 @@ function AcceptRequests({ allDonors }) {
   // Change page
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+    // Optionally, you can add any other logic here, such as showing a message to the user
+};
+
   return (
     <div>
       <Navigation username={'Mike Junior'} acceptedRequestsColor={'primary'}/>
@@ -40,7 +45,7 @@ function AcceptRequests({ allDonors }) {
                     <li><strong>Appointment Date:</strong> {donor.request_date}</li>
                     <li><strong>Email:</strong> {donor.email}</li>
                   </ul>
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <input type="hidden" name="request_id" value={donor.request_id} />
                     <div className="d-grid mt-4">
                       <button className="btn btn-success btn-lg">Attended</button>

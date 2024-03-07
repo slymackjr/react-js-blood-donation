@@ -14,6 +14,12 @@ const RequestDonor = ({ allDonors}) => {
 
   // Change page
   const paginate = pageNumber => setCurrentPage(pageNumber);
+
+    const handleSubmit = (event) => {
+        event.preventDefault(); // Prevent the default form submission behavior
+        // Optionally, you can add any other logic here, such as showing a message to the user
+    };
+
   return (
     <div>
       <Navigation username={'Mike Junior'} homeColor={'primary'}/>
@@ -37,13 +43,13 @@ const RequestDonor = ({ allDonors}) => {
                     <li><strong>Health:</strong> {donor.status}</li>
                   </ul>
                   <div className="d-grid gap-2 mt-4">
-                    <form>
+                    <form onSubmit={handleSubmit}>
                       <input type="hidden" name="donor_email" value={donor.email} />
                       <p className="card-text text-center">
                         <button className="btn link-secondary">More...</button>
                       </p>
                     </form>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                       <input type="hidden" name="donor_email" value={donor.email} />
                       <p className="card-text text-center">
                         <button className="btn btn-primary">Request</button>

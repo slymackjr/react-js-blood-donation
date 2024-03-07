@@ -15,6 +15,11 @@ const HomeDonor = ({ allDonors, successMessage }) => {
   // Change page
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+    // Optionally, you can add any other logic here, such as showing a message to the user
+};
+
   return (
     <div>
       {/* Navbar */}
@@ -52,10 +57,10 @@ const HomeDonor = ({ allDonors, successMessage }) => {
                   </ul>
                   <div className="d-flex justify-content-between mt-3">
                     {/* Buttons for cancel and accept */}
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <button className="btn btn-danger">Cancel</button>
                       </form>
-                      <form>
+                      <form onSubmit={handleSubmit}>
                         <button className="btn btn-success">Accept</button>
                       </form>
                   </div>

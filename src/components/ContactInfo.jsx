@@ -1,6 +1,10 @@
 import React from 'react';
 
 const ContactInfo = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+    // Optionally, you can add any other logic here, such as showing a message to the user
+};
   return (
     <div className="container mt-3">
       <div className="row justify-content-center">
@@ -11,7 +15,7 @@ const ContactInfo = () => {
             </div>
             <div className="card-body">
               <h5 className="card-title">Feel free to reach out to us. Our team is ready to assist you.</h5>
-              <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+              <form id="contact-form" onSubmit={handleSubmit}>
                 <div className="row mb-4">
                   <div className="col-md-6">
                     <div className="md-form">
