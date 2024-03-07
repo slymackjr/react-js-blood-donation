@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { lable, logo1 } from '../../assets/img';
 
 const RegisterStaff = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+    // Optionally, you can add any other logic here, such as showing a message to the user
+};
   return (
     <div>
         <div className="text-center p-3 container-md">
@@ -24,7 +28,7 @@ const RegisterStaff = () => {
                       {sessionStorage.getItem('error') && (
                         <p className="text-center text-danger mb-5 mx-1 mx-md-4 mt-4">{sessionStorage.getItem('error')}!</p>
                       )}
-                      <form className="mx-1 mx-md-4" method="post" action="/register.staff.method">
+                      <form className="mx-1 mx-md-4" onSubmit={handleSubmit}>
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
@@ -142,7 +146,7 @@ const RegisterStaff = () => {
                           </label>
                         </div>
                         <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                          <button type="submit" name="register" className="btn btn-primary btn-lg">Register</button>
+                          <button name="register" className="btn btn-primary btn-lg">Register</button>
                         </div>
                         <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                           <p className="small mb-0">Already have an account? <Link to="/login-staff">login at your account</Link></p>

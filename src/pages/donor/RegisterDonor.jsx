@@ -3,6 +3,10 @@ import { logo1, lable } from '../../assets/img';
 import { Link } from 'react-router-dom';
 
 const RegisterDonor = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+    // Optionally, you can add any other logic here, such as showing a message to the user
+};
   return (
     <div>
       <div className="text-center p-3 container-md">
@@ -24,7 +28,7 @@ const RegisterDonor = () => {
                         {sessionStorage.getItem('error') && 
                           <p className="text-center text-danger mb-5 mx-1 mx-md-4 mt-4">{sessionStorage.getItem('error')}!</p>
                         }
-                        <form className="mx-1 mx-md-4">
+                        <form className="mx-1 mx-md-4" onSubmit={handleSubmit}>
                           <div className="d-flex flex-row align-items-center mb-4">
                             <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                             <div className="form-outline flex-fill mb-0">

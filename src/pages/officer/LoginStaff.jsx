@@ -3,6 +3,10 @@ import { lable, logo1 } from '../../assets/img';
 import { Link } from 'react-router-dom';
 
 function LoginStaff() {
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+    // Optionally, you can add any other logic here, such as showing a message to the user
+};
   return (
     <div>
       <div className="text-center p-3 container-md">
@@ -20,9 +24,7 @@ function LoginStaff() {
                     <div className="row justify-content-center">
                       <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                         <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Welcome Back Staff!</p>
-                        <form className="mx-1 mx-md-4">
-                          {/* CSRF token */}
-                          <input type="hidden" name="_token" value="YOUR_CSRF_TOKEN" />
+                        <form className="mx-1 mx-md-4" onSubmit={handleSubmit}>
                           <div className="d-flex flex-row align-items-center mb-4">
                             <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                             <div className="form-outline flex-fill mb-0">
@@ -42,7 +44,7 @@ function LoginStaff() {
                             </label>
                           </div>
                           <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                            <button type="submit" name="login" className="btn btn-primary btn-lg">Login</button>
+                            <button name="login" className="btn btn-primary btn-lg">Login</button>
                           </div>
                           <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                             <p className="small mb-0">Don't have an account? <Link to="/register-staff">Create an account</Link></p>

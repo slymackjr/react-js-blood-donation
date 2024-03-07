@@ -3,6 +3,10 @@ import { logo1,lable } from '../../assets/img';
 import { Link } from 'react-router-dom';
 
 const LoginDonor = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault(); // Prevent the default form submission behavior
+        // Optionally, you can add any other logic here, such as showing a message to the user
+    };
     return (
         <div>
             <div className="text-center p-3 container-md">
@@ -20,7 +24,7 @@ const LoginDonor = () => {
                                         <div className="row justify-content-center">
                                             <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                                                 <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Welcome Back Our beloved Blood Donor!</p>
-                                                <form className="mx-1 mx-md-4"> 
+                                                <form className="mx-1 mx-md-4" onSubmit={handleSubmit}> 
                                                     <div className="d-flex flex-row align-items-center mb-4">
                                                         <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                                                         <div className="form-outline flex-fill mb-0">

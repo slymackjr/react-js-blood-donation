@@ -52,6 +52,12 @@ const HomeDonor = ({ allDonors, successMessage }) => {
                   </ul>
                   <div className="d-flex justify-content-between mt-3">
                     {/* Buttons for cancel and accept */}
+                    <form>
+                        <button className="btn btn-danger">Cancel</button>
+                      </form>
+                      <form>
+                        <button className="btn btn-success">Accept</button>
+                      </form>
                   </div>
                 </div>
               </div>
