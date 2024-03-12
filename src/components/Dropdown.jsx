@@ -26,13 +26,13 @@ const Dropdown = ({ username, defaultTextColor, profileColor, profileRoute }) =>
   return (
     <li className="nav-item dropdown" ref={dropdownRef}>
       <a
-        className={`nav-link dropdown-toggle text-${profileColor || defaultTextColor}`}
+        className={`nav-link dropdown-toggle ps-3 pe-1 text-${profileColor || defaultTextColor}`}
         href="#"
         id="navbarDropdown"
         role="button"
         onClick={toggleDropdown}
       >
-        <i className="fas fa-user mx-1"></i>
+        <i className="fas fa-user mx-1 p-1"></i>
         {username}
       </a>
       {/* Dropdown menu */}
