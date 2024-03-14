@@ -53,6 +53,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li><a href="#deployed-project">Deployed Project</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -103,6 +104,20 @@ This is an example of how you may give instructions on setting up your project l
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- DEPLOYED PROJECT -->   
+
+## Deployed Project
+
+Check out the deployed version of this project:
+[Live Demo](https://react-js-blood-donation.vercel.app/)
+
+<div style="overflow-x: auto; white-space: nowrap;">
+  <img src="screenshots/image1.png" alt="Image 1" style="display: inline-block; max-width: 100%;">
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- USAGE -->   
 
 ## Usage
